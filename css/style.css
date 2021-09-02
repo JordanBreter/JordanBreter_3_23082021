@@ -2,16 +2,27 @@
 .logo{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .localisation{
     display: flex;
     justify-content: center;
     background-color: #EAEAEA;
 }
+i.fas.fa-map-marker-alt{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
 
 section h1, section p{
     display: flex;
     justify-content: center;
+}
+.background p{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 h2{
     display: flex;
@@ -22,12 +33,14 @@ a{
     color: black;
 }
 button.button {
-    background-color: #FF79DA;
+    background-color:#FF79DA;
     color: white;
     border-radius: 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    padding: 25px;
+    padding: 10px 30px;
 }
 .background{
     background-color: #f2f2f2;
@@ -36,20 +49,64 @@ button.button {
 }
 nav{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
 }
-nav p{
-    border: 1px solid black;
-    border-radius: 15px;
+.number{
+    display: flex;
+    align-items: center;
+    border: 1px solid #AB7EE3;
+    color: white;
+    background: #AB7EE3;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: -15px;
+    top: 15px;
+}
+
+.choise{
+    display: flex;
+    position: relative;
+}
+.choix {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f6f6f6;
+    border-radius: 35px;
     padding: 25px;
     background-color: #f6f6f6;
+
+}
+.menu {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f6f6f6;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: #f6f6f6;
+}
+.degustez {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f6f6f6;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: #f6f6f6;
+}
+nav i{
+    margin: 10px;
 }
 section img{
     width: 100%;
     height: 200px;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
+}
+figure p{
+    display: flex;
+    justify-content: flex-start;
 }
 
 figure{
@@ -61,6 +118,12 @@ figure{
 figcaption{
     margin-left: 5px;
 }
+a.bloc-link{
+    flex: 1 50%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
 .new{
     display: flex;
     justify-content: center;
@@ -68,7 +131,15 @@ figcaption{
     width: 90px;
     height: 30px;
     position: absolute;
+    right: 180px;
+    top: 25px;
     background-color: #99E2D0;
+}
+i.far.fa-heart {
+    position: relative;
+    left: 260px;
+    bottom: 40px;
+    font-size: x-large;
 }
 .resto{
     display: flex;
@@ -81,13 +152,21 @@ footer{
 footer a{
     color: white;
     display: flex;
-    margin: 10px;
+    align-items: center;
 }
-footer p{
+i.fas.fa-utensils{
+    margin-right: 10px;
+}
+i.fas.fa-hands-helping{
+    margin-right: 10px;
+}
+
+.logo2 p{
     font-family: 'Shrikhand', sans-serif;
     color: white;
     font-size: 24px;
     display: flex;
+    justify-content: flex-start;
     margin: 10px;
 }
 /* RESPONSIVE */
@@ -114,5 +193,22 @@ footer p{
         flex-direction: column;
         align-content: center;
     }
-    
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+    .choix{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .menu{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .degustez{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }

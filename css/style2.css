@@ -1,0 +1,111 @@
+.haut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+i.fas.fa-arrow-left {
+    font-size: xx-large;
+    position: relative;
+    right: 300px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.top img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.logo2 p{
+    font-family: 'Shrikhand', sans-serif;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.grey{
+    background-color: #f2f2f2;
+    padding-top: 30px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-family: 'Shrikhand', sans-serif;
+}
+i.far.fa-heart{
+    font-size: x-large;
+}
+.choise{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.choix{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: white;
+}
+.choix2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: white;
+}
+.choix3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: white;
+}
+.choix4{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 35px;
+    padding: 25px;
+    background-color: white;
+}
+.commander{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.button{
+    background-color: #AB7EE3;
+}
+footer{
+    background-color: #353535;
+    padding: 10px;
+}
+footer a{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+i.fas.fa-utensils{
+    margin-right: 10px;
+}
+i.fas.fa-hands-helping{
+    margin-right: 10px;
+}
