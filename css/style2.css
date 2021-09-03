@@ -29,10 +29,13 @@ i.fas.fa-arrow-left {
 .grey{
     background-color: #f2f2f2;
     padding-top: 30px;
+    border-radius: 70px 70px 0px 0px;
 }
 .title{
     display: flex;
     justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 h1{
     font-family: 'Shrikhand', sans-serif;
@@ -40,10 +43,24 @@ h1{
 i.far.fa-heart{
     font-size: x-large;
 }
+a.bloc-link{
+    flex: 1 30%;
+    margin: 10px;
+}
+a.bloc-link2{
+    flex: 1 40%;
+    margin: 10px;
+}
 .choise{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.entrees p{
+    margin-left: 30px;
+}
+.choix,.choix2,.choix3,.choix4{
+    font-size: smaller;
 }
 .choix{
     display: flex;
@@ -81,6 +98,14 @@ i.far.fa-heart{
     padding: 25px;
     background-color: white;
 }
+.prix {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: 0px;
+    bottom: 50px;
+}
+
 .commander{
     display: flex;
     justify-content: center;
@@ -108,4 +133,13 @@ i.fas.fa-utensils{
 }
 i.fas.fa-hands-helping{
     margin-right: 10px;
+}
+/*SMALL*/
+@media screen and (max-width: 576px){
+    a.bloc-link{
+        flex: 1 100%;
+    }
+    a.bloc-link2{
+        flex: 1 100%;
+    }
 }
