@@ -21,7 +21,6 @@ section h1, section p{
     justify-content: center;
 }
 .background p{
-    padding-top: 50px;
     padding-bottom: 50px;
 }
 h2{
@@ -33,9 +32,11 @@ a{
     color: black;
 }
 button.button {
-    background-color:#FF79DA;
+    background:linear-gradient(#FF79DA,#AB7EE3);
+    box-shadow: 0px 0px 10px 0px #00000066;
+    border: #eee;
     color: white;
-    border-radius: 15px;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,17 +54,15 @@ nav{
 }
 .number{
     display: flex;
-    align-items: center;
+    justify-content: center;
     border: 1px solid #AB7EE3;
     color: white;
     background: #AB7EE3;
-    padding: 10px;
     border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
     position: absolute;
     left: -15px;
-    top: 15px;
+    top: 20px;
+    width: 20px;
 }
 
 .choise{
@@ -77,7 +76,8 @@ nav{
     border-radius: 35px;
     padding: 25px;
     background-color: #f6f6f6;
-
+    width: 280px;
+    height: 10px;
 }
 .menu {
     display: flex;
@@ -86,6 +86,8 @@ nav{
     border-radius: 35px;
     padding: 25px;
     background-color: #f6f6f6;
+    width: 280px;
+    height: 10px;
 }
 .degustez {
     display: flex;
@@ -94,6 +96,8 @@ nav{
     border-radius: 35px;
     padding: 25px;
     background-color: #f6f6f6;
+    width: 280px;
+    height: 10px;
 }
 nav i{
     margin: 10px;
@@ -113,27 +117,25 @@ figure{
     width: 300px;
     border-radius: 20px;
     border: 1px solid #f2f2f2;
-    box-shadow: 10px black;
+    box-shadow: 0px 0px 10px 0px #00000066;
+    position: relative;
 }
 figcaption{
     margin-left: 5px;
 }
 a.bloc-link{
-    flex: 1 50%;
-    display: flex;
-    justify-content: space-around;
+    flex: 1 25%;
     position: relative;
 }
 .new{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90px;
-    height: 30px;
     position: absolute;
-    right: 180px;
-    top: 25px;
+    padding: 5px;
+    right: 15px;
+    top: 5px;
     background-color: #99E2D0;
+    color: #31947b;
+    font-weight: bold;
 }
 i.far.fa-heart {
     position: relative;
