@@ -1,6 +1,23 @@
 body{
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
+.loader {
+    color: #ffffff;
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
 .logo{
     display: flex;
     justify-content: center;
@@ -45,6 +62,10 @@ button.button {
     margin: auto;
     padding: 10px 30px;
 }
+button.button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 0px #00000066;
+}
 .background{
     background-color: #f2f2f2;
     padding-top: 1px;
@@ -70,6 +91,9 @@ nav{
 .choise{
     display: flex;
     position: relative;
+}
+.choise :hover {
+    background-color: #e4d5f6;
 }
 .choix {
     display: flex;
@@ -125,9 +149,13 @@ figure{
 figcaption h3,figcaption p{
     margin-left: 5px;
 }
+figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 a.bloc-link{
     flex: 1 25%;
-    position: relative;
 }
 .new{
     display: flex;
@@ -139,18 +167,25 @@ a.bloc-link{
     color: #31947b;
     font-weight: bold;
 }
+.heart{
+    margin-right: 15px;
+}
 i.far.fa-heart {
-    position: relative;
-    left: 260px;
-    bottom: 40px;
     font-size: x-large;
+    display: flex;
+    position: absolute;
+}
+.fullheart{
+    display: flex;
 }
 i.fas.fa-heart {
-    position: relative;
-    left: 260px;
-    bottom: 40px;
     font-size: x-large;
-    background:linear-gradient(#FF79DA,#AB7EE3);
+    position: relative;
+    color: transparent;
+}
+.fullheart :hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    -webkit-background-clip: text;
 }
 
 .resto{
@@ -223,3 +258,4 @@ i.fas.fa-hands-helping{
     }
     
 }
+/*KEYFRAMES*/

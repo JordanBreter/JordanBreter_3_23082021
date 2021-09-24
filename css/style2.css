@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 .haut{
     display: flex;
@@ -49,23 +50,30 @@ h1{
 }
 i.far.fa-heart{
     font-size: x-large;
+    display: flex;
+    position: absolute;
 }
 i.fas.fa-heart {
     font-size: x-large;
-    background:linear-gradient(#FF79DA,#AB7EE3);
+    position: relative;
+    color: transparent;
 }
-a.bloc-link{
-    flex: 1 30%;
-    margin: 10px;
+.fullheart :hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    -webkit-background-clip: text;
 }
-a.bloc-link2{
-    flex: 1 40%;
-    margin: 10px;
-}
+
 .choise{
     display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+.choise2{
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .line{
     border-bottom: 3px solid #99E2D0;
@@ -85,56 +93,54 @@ a.bloc-link2{
 }
 .choix{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 30%;
+    margin: 1rem 0;
+    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
-    padding: 25px;
-    background-color: white;
-    height: 20px;
+    padding: 15px;
+    cursor: pointer;
+    
 }
 .choix2{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 30%;
+    margin: 1rem 0;
+    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
-    padding: 25px;
-    background-color: white;
-    height: 20px;
+    padding: 15px;
+    cursor: pointer;
 }
 .choix3{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 30%;
+    margin: 1rem 0;
+    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
-    padding: 25px;
-    background-color: white;
-    height: 20px;
+    padding: 15px;
+    cursor: pointer;
 }
 .choix4{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 30%;
+    margin: 1rem 0;
+    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
-    padding: 25px;
-    background-color: white;
-    height: 20px;
+    padding: 15px;
+    cursor: pointer;
 }
 .text{
-    display: flex;
-    flex-direction: column;
-    font-size: small;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
 }
 .text h2,.text p{
     margin: 0px;
@@ -142,9 +148,9 @@ a.bloc-link2{
 .prix {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    left: 0px;
-    top: 5px;
+    align-items: center;
+    padding-left: 0.5rem;
+
 }
 i.fas.fa-check-circle {
     display: flex;
@@ -155,6 +161,32 @@ i.fas.fa-check-circle {
     height: 70px;
     width: 50px;
     border-radius: 0px 20px 20px 0px;
+}
+.valide{
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+.valide:hover{
+    margin-right: -1rem;
+}
+.rotation {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+.rotation:hover{
+    transform: rotate(0);
 }
 
 .commander{
@@ -170,6 +202,11 @@ i.fas.fa-check-circle {
     box-shadow: 0px 0px 10px 0px #00000066;
     border: #eee;
 }
+button.button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 0px #00000066;
+}
+
 footer{
     background-color: #353535;
     padding: 10px;
@@ -192,14 +229,29 @@ i.fas.fa-hands-helping{
 .position{
     position: relative;
 }
+
+/*MEDIUM*/
+@media screen and (max-width: 1200px){
+    .choise{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .choix,.choix2,.choix3,.choix4{
+        width: 90%;
+
+}
+
 /*SMALL*/
 @media screen and (max-width: 576px){
     body{
         display: flex;
         flex-wrap: wrap;
     }
-    header,footer{
-        width: 100%;
+    .choise{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
     i.fas.fa-arrow-left {
         font-size: x-large;
@@ -210,23 +262,15 @@ i.fas.fa-hands-helping{
         display: flex;
         align-items: center;
     }
-
-    a.bloc-link{
-        flex: 1 100%;
+    .choix,.choix2,.choix3,.choix4{
+        width: 80%;
     }
-    a.bloc-link2{
-        flex: 1 100%;
+    .position{
+        width: 100%;
     }
-    .entrees{
-        margin-left: 0px;
-    }
-    .plats{
-        margin-left: 0px;
-    }
-    .desserts{
-        margin-left: 0px;
     }
     p{
         margin-left: 10px;
     }
 }
+
