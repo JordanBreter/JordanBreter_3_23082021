@@ -2,22 +2,54 @@ body{
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
-.loader {
-    color: #ffffff;
-    font-size: 90px;
-    text-indent: -9999em;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin: 72px auto;
-    position: relative;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-  }
+.loadScreen {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+
+.spinnerBig {
+        position: absolute;
+        width: 17rem;
+        height: 17rem;
+        border-radius: 50%;
+        border: 3rem solid rgba(161, 160, 160, 0);
+        border-top: 3rem solid #9356dc;
+        border-left: 3rem solid #9356dc;
+        border-bottom: 3rem solid #9356dc;
+        animation: spinneroff 0.8s 0.2s 5;
+    }
+.spinner {
+        border: 2rem solid rgba(161, 160, 160, 0);
+        border-top: 2rem solid #ff79da;
+        border-right: 2rem solid #ff79da;
+        border-bottom: 2rem solid #ff79da;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        opacity: 1;
+        animation: spinner 0.8s 0.2s 5;
+        position: absolute;
+    }
+    .spinnerSmall {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 1.5rem solid rgba(161, 160, 160, 0);
+        border-top: 1.5rem solid #99e2d0;
+        border-left: 1.5rem solid #99e2d0;
+        border-bottom: 1.5rem solid #99e2d0;
+        animation: spinneroff 0.8s 0.2s 5;
+    }
+
 .logo{
     display: flex;
     justify-content: center;
@@ -64,7 +96,8 @@ button.button {
 }
 button.button:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 50px 0px #00000066;
+    box-shadow: 0px 0px 20px 0px #00000066;
+    background: #AB7EE3;
 }
 .background{
     background-color: #f2f2f2;
@@ -99,7 +132,7 @@ nav{
     display: flex;
     align-items: center;
     border: 1px solid #f6f6f6;
-    border-radius: 35px;
+    border-radius: 20px;
     padding: 25px;
     background-color: #f6f6f6;
     width: 280px;
@@ -109,7 +142,7 @@ nav{
     display: flex;
     align-items: center;
     border: 1px solid #f6f6f6;
-    border-radius: 35px;
+    border-radius: 20px;
     padding: 25px;
     background-color: #f6f6f6;
     width: 280px;
@@ -119,7 +152,7 @@ nav{
     display: flex;
     align-items: center;
     border: 1px solid #f6f6f6;
-    border-radius: 35px;
+    border-radius: 20px;
     padding: 25px;
     background-color: #f6f6f6;
     width: 280px;
@@ -186,6 +219,8 @@ i.fas.fa-heart {
 .fullheart :hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
+    transition: transform 1000ms linear;
+    transform: scale(1.2);
 }
 
 .resto{
@@ -217,6 +252,7 @@ i.fas.fa-hands-helping{
     justify-content: flex-start;
     margin: 10px;
 }
+
 /* RESPONSIVE */
 /*LARGE*/
 @media screen and (max-width: 1200px) {
@@ -224,6 +260,31 @@ i.fas.fa-hands-helping{
         display: flex;
         flex-direction: column;
         align-content: center;
+    }
+    section h1, section p{
+        text-align: center;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    .choise{
+        margin: 15px;
+    }
+    figure{
+        width: 800px;
+        margin-bottom: 50px;
+    }
+    section img{
+        height: 350px;
+    }
+    .logo2{
+        display: flex;
+        justify-content: center;
+    }
+    footer a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 /*MEDIUM*/
@@ -235,6 +296,28 @@ i.fas.fa-hands-helping{
     }
     section h1, section p{
         text-align: center;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    .choise{
+        margin: 15px;
+    }
+    figure{
+        width: 630px;
+        margin-bottom: 35px;
+    }
+    section img{
+        height: 275px;
+    }
+    .logo2{
+        display: flex;
+        justify-content: center;
+    }
+    footer a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 /*SMALL*/
@@ -253,9 +336,33 @@ i.fas.fa-hands-helping{
         flex-wrap: wrap;
         align-content: space-around;
     }
+    figure{
+        width: 300px;
+    }
+    section img{
+        height: 200px;
+    }
     .choise{
         margin-bottom: 20px;
     }
     
 }
 /*KEYFRAMES*/
+
+    @keyframes spinneroff{
+        0%{
+            transform: rotate(360deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes fadeout{
+        0%{
+            opacity: 100%;
+        }
+        100%{
+            opacity: 100%;
+            visibility: hidden;
+        }
+    }

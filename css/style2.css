@@ -19,6 +19,9 @@ i.fas.fa-arrow-left {
     display: flex;
     justify-content: center;
 }
+.logo img{
+    width: 300px;
+}
 .top img{
     width: 100%;
     height: 350px;
@@ -61,13 +64,14 @@ i.fas.fa-heart {
 .fullheart :hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
+    transition: transform 1000ms linear;
+    transform: scale(1.2);
 }
 
 .choise{
     display: flex;
     justify-content: space-between;
     margin: auto;
-    max-width: 1200px;
     position: relative;
 }
 .choise2{
@@ -81,14 +85,30 @@ i.fas.fa-heart {
 }
 .entrees{
     margin-left: 30px;
+    animation: slideup 2s forwards;
+    opacity: 0;
+}
+.entrees:nth-child(2){
+    animation-delay: calc(2s/5);
 }
 .plats{
     margin-left: 30px;
+    animation: slideup 3s forwards;
+    opacity: 0;
+}
+.plats:nth-child(3){
+    animation-delay: calc(3s/5);
 }
 .desserts{
     margin-left: 30px;
+    animation: slideup 4s forwards;
+    opacity: 0;
+}
+.desserts:nth-child(4){
+    animation-delay: calc(4s/5);
 }
 .choix,.choix2,.choix3,.choix4{
+    background-color: white;
     font-size: small;
 }
 .choix{
@@ -148,7 +168,7 @@ i.fas.fa-heart {
 .prix {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     padding-left: 0.5rem;
 
 }
@@ -161,6 +181,7 @@ i.fas.fa-check-circle {
     height: 70px;
     width: 50px;
     border-radius: 0px 20px 20px 0px;
+    font-size: large;
 }
 .valide{
     background-color: #99e2d0;
@@ -170,8 +191,18 @@ i.fas.fa-check-circle {
     align-content: center;
     justify-content: center;
     transition-duration: 0.5s;
+    align-items: center;
 }
-.valide:hover{
+.choix:hover .valide{
+    margin-right: -1rem;
+}
+.choix2:hover .valide{
+    margin-right: -1rem;
+}
+.choix3:hover .valide{
+    margin-right: -1rem;
+}
+.choix4:hover .valide{
     margin-right: -1rem;
 }
 .rotation {
@@ -185,9 +216,19 @@ i.fas.fa-check-circle {
     transform: rotate(180deg);
     transition-duration: 0.5s;
 }
-.rotation:hover{
+.choix:hover .rotation{
     transform: rotate(0);
 }
+.choix2:hover .rotation{
+    transform: rotate(0);
+}
+.choix3:hover .rotation{
+    transform: rotate(0);
+}
+.choix4:hover .rotation{
+    transform: rotate(0);
+}
+
 
 .commander{
     display: flex;
@@ -204,7 +245,8 @@ i.fas.fa-check-circle {
 }
 button.button:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 50px 0px #00000066;
+    box-shadow: 0px 0px 20px 0px #00000066;
+    background: #AB7EE3;
 }
 
 footer{
@@ -229,9 +271,9 @@ i.fas.fa-hands-helping{
 .position{
     position: relative;
 }
-
-/*MEDIUM*/
-@media screen and (max-width: 1200px){
+/* RESPONSIVE */
+/*LARGE*/
+@media screen and (max-width: 1200px) {
     .choise{
         display: flex;
         flex-direction: column;
@@ -239,6 +281,42 @@ i.fas.fa-hands-helping{
     }
     .choix,.choix2,.choix3,.choix4{
         width: 90%;
+        background-color: white;
+    }
+    .logo2{
+        display: flex;
+        justify-content: center;
+    }
+    footer a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*MEDIUM*/
+@media screen and (max-width: 768px){
+    .choise{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .choix,.choix2,.choix3,.choix4{
+        width: 90%;
+        background-color: white;
+    }
+    section p{
+        margin-left: 0px;
+    }
+    .logo2{
+        display: flex;
+        justify-content: center;
+    }
+    footer a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
 
@@ -247,6 +325,9 @@ i.fas.fa-hands-helping{
     body{
         display: flex;
         flex-wrap: wrap;
+    }
+    .logo img{
+        width: 150px;
     }
     .choise{
         display: flex;
@@ -264,13 +345,36 @@ i.fas.fa-hands-helping{
     }
     .choix,.choix2,.choix3,.choix4{
         width: 80%;
+        background-color: white;
     }
     .position{
         width: 100%;
     }
+    section p{
+        margin-left: 0px;
     }
+
     p{
         margin-left: 10px;
     }
+    .logo2{
+        display: flex;
+        justify-content: center;
+    }
+    footer a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
+@keyframes slideup{
+    0%{
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
