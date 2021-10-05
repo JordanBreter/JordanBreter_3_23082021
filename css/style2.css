@@ -64,8 +64,9 @@ i.fas.fa-heart {
 .fullheart :hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
-    transition: transform 1000ms linear;
+    transition: transform 1.2s linear;
     transform: scale(1.2);
+    animation: animheart 1s linear;
 }
 
 .choise{
@@ -83,29 +84,37 @@ i.fas.fa-heart {
     border-bottom: 3px solid #99E2D0;
     width: 40px;
 }
-.entrees{
+.choix{
     margin-left: 30px;
     animation: slideup 2s forwards;
     opacity: 0;
 }
-.entrees:nth-child(2){
-    animation-delay: calc(2s/5);
+.choix:nth-child(2){
+    animation-delay: calc(2s/8);
 }
-.plats{
-    margin-left: 30px;
-    animation: slideup 3s forwards;
-    opacity: 0;
-}
-.plats:nth-child(3){
-    animation-delay: calc(3s/5);
-}
-.desserts{
+.choix2{
     margin-left: 30px;
     animation: slideup 4s forwards;
     opacity: 0;
 }
-.desserts:nth-child(4){
-    animation-delay: calc(4s/5);
+.choix2:nth-child(3){
+    animation-delay: calc(4s/8);
+}
+.choix3{
+    margin-left: 30px;
+    animation: slideup 6s forwards;
+    opacity: 0;
+}
+.choix3:nth-child(4){
+    animation-delay: calc(6s/8);
+}
+.choix4{
+    margin-left: 30px;
+    animation: slideup 8s forwards;
+    opacity: 0;
+}
+.choix4:nth-child(4){
+    animation-delay: calc(8s/8);
 }
 .choix,.choix2,.choix3,.choix4{
     background-color: white;
@@ -246,7 +255,7 @@ i.fas.fa-check-circle {
 button.button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 20px 0px #00000066;
-    background: #AB7EE3;
+    background: linear-gradient(#f397d9,#b291db);
 }
 
 footer{
@@ -377,4 +386,14 @@ i.fas.fa-hands-helping{
         transform: translateY(0px);
         opacity: 100%;
     }
+}
+@keyframes animheart{
+    0%{
+        transform: translateY(1px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }   
 }
