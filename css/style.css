@@ -93,6 +93,9 @@ button.button {
     justify-content: center;
     margin: auto;
     padding: 10px 30px;
+    width: 270px;
+    height: 50px;
+    font-size: 1.1em;
 }
 button.button:hover{
     cursor: pointer;
