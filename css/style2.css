@@ -304,6 +304,9 @@ i.fas.fa-hands-helping{
         align-items: center;
         justify-content: center;
     }
+    footer{
+        width: 100%;
+    }
 }
 
 /*MEDIUM*/
@@ -329,6 +332,9 @@ i.fas.fa-hands-helping{
         align-items: center;
         justify-content: center;
     }
+    footer{
+        width: 100%;
+    }
 
 }
 
@@ -344,7 +350,7 @@ i.fas.fa-hands-helping{
     .choise{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     i.fas.fa-arrow-left {
         font-size: x-large;
@@ -377,6 +383,9 @@ i.fas.fa-hands-helping{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    footer{
+        width: 100%;
     }
 }
 
