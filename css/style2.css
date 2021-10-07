@@ -80,9 +80,14 @@ i.fas.fa-heart {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.entrees p,.plats p,.desserts p{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
 .line{
     border-bottom: 3px solid #99E2D0;
     width: 40px;
+    margin-left: 10px;
 }
 .choix{
     margin-left: 30px;
@@ -344,9 +349,7 @@ i.fas.fa-hands-helping{
         display: flex;
         flex-wrap: wrap;
     }
-    .logo img{
-        width: 150px;
-    }
+    
     .choise{
         display: flex;
         flex-direction: column;
