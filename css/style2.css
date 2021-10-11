@@ -4,16 +4,15 @@ body{
 }
 .haut{
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
-    top: 15px;
+    top: 20px;
 }
 
 i.fas.fa-arrow-left {
     font-size: xx-large;
-    position: relative;
-    right: 300px;
+    position: absolute;
+    left: 120px;
 }
 .logo{
     display: flex;
@@ -23,6 +22,13 @@ i.fas.fa-arrow-left {
     width: 300px;
 }
 .top img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+    top: 45px;
+}
+.top2 img{
     width: 100%;
     height: 350px;
     object-fit: cover;
@@ -45,6 +51,7 @@ i.fas.fa-arrow-left {
 .title{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -71,7 +78,7 @@ i.fas.fa-heart {
 
 .choise{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
     position: relative;
 }
@@ -123,14 +130,12 @@ i.fas.fa-heart {
 }
 .choix,.choix2,.choix3,.choix4{
     background-color: white;
-    font-size: small;
 }
 .choix{
     display: flex;
     width: 30%;
     margin: 1rem 0;
     overflow: hidden;
-    border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
     padding: 15px;
@@ -142,7 +147,6 @@ i.fas.fa-heart {
     width: 30%;
     margin: 1rem 0;
     overflow: hidden;
-    border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
     padding: 15px;
@@ -153,7 +157,6 @@ i.fas.fa-heart {
     width: 30%;
     margin: 1rem 0;
     overflow: hidden;
-    border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
     padding: 15px;
@@ -164,7 +167,6 @@ i.fas.fa-heart {
     width: 30%;
     margin: 1rem 0;
     overflow: hidden;
-    border: 1px solid #eee;
     box-shadow: 0px 0px 10px 0px #00000066;
     border-radius: 20px;
     padding: 15px;
@@ -178,12 +180,15 @@ i.fas.fa-heart {
 }
 .text h2,.text p{
     margin: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .prix {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding-left: 0.5rem;
+    font-weight: bold;
 
 }
 i.fas.fa-check-circle {
@@ -195,7 +200,7 @@ i.fas.fa-check-circle {
     height: 70px;
     width: 50px;
     border-radius: 0px 20px 20px 0px;
-    font-size: large;
+    font-size: 20px;
 }
 .valide{
     background-color: #99e2d0;
@@ -290,7 +295,7 @@ i.fas.fa-hands-helping{
 }
 /* RESPONSIVE */
 /*LARGE*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1366px) {
     .choise{
         display: flex;
         flex-direction: column;
@@ -309,13 +314,10 @@ i.fas.fa-hands-helping{
         align-items: center;
         justify-content: center;
     }
-    footer{
-        width: 100%;
-    }
 }
 
 /*MEDIUM*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .choise{
         display: flex;
         flex-direction: column;
@@ -337,28 +339,32 @@ i.fas.fa-hands-helping{
         align-items: center;
         justify-content: center;
     }
-    footer{
-        width: 100%;
-    }
-
 }
 
 /*SMALL*/
-@media screen and (max-width: 576px){
+@media screen and (max-width: 667px){
     body{
         display: flex;
         flex-wrap: wrap;
     }
-    
+    .logo img{
+        width: 170px;
+    }
     .choise{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .top2 img{
+        height: 100%;
+    }
+    .haut{
+        align-items: initial;
+    }
     i.fas.fa-arrow-left {
         font-size: x-large;
-        position: relative;
-        right: 50px;
+        position: absolute;
+        left: 25px;
     }
     i.far.fa-heart{
         display: flex;
@@ -371,12 +377,19 @@ i.fas.fa-hands-helping{
     .position{
         width: 100%;
     }
+    .title{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     section p{
         margin-left: 0px;
     }
 
     p{
         margin-left: 10px;
+    }
+    .button{
+        width: 200px;
     }
     .logo2{
         display: flex;
@@ -388,7 +401,18 @@ i.fas.fa-hands-helping{
         justify-content: center;
     }
     footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
+    }
+    i.fas.fa-utensils{
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+    i.fas.fa-hands-helping{
+        margin-right: 0px;
+        margin-left: 10px;
     }
 }
 
