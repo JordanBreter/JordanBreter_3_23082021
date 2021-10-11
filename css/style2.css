@@ -8,7 +8,6 @@ body{
     position: relative;
     top: 20px;
 }
-
 i.fas.fa-arrow-left {
     font-size: xx-large;
     position: absolute;
@@ -85,16 +84,16 @@ i.fas.fa-heart {
 .choise2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .entrees p,.plats p,.desserts p{
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .line{
     border-bottom: 3px solid #99E2D0;
     width: 40px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .choix{
     margin-left: 30px;
@@ -177,6 +176,7 @@ i.fas.fa-heart {
     text-overflow: ellipsis;
     overflow: hidden;
     flex: 1;
+    font-size: smaller;
 }
 .text h2,.text p{
     margin: 0px;
@@ -247,8 +247,6 @@ i.fas.fa-check-circle {
 .choix4:hover .rotation{
     transform: rotate(0);
 }
-
-
 .commander{
     display: flex;
     justify-content: center;
@@ -279,6 +277,7 @@ footer a{
     color: white;
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 a{
     text-decoration: none;
@@ -292,6 +291,7 @@ i.fas.fa-hands-helping{
 }
 .position{
     position: relative;
+    margin-top: -10px;
 }
 /* RESPONSIVE */
 /*LARGE*/
