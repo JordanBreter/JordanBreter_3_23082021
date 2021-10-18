@@ -1,6 +1,8 @@
 body{
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .loadScreen {
     background: white;
@@ -128,6 +130,7 @@ nav{
 .choise{
     display: flex;
     position: relative;
+    justify-content: center;
 }
 .choise :hover {
     background-color: #e4d5f6;
@@ -227,6 +230,7 @@ i.fas.fa-heart {
     font-size: x-large;
     position: relative;
     color: transparent;
+    cursor: pointer;
 }
 .fullheart :hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -335,7 +339,7 @@ i.fas.fa-hands-helping{
     }
 }
 /*SMALL*/
-@media screen and (max-width: 667px) {
+@media screen and (min-width:320px) and (max-width: 667px) {
     .logo img{
         width: 200px;
     }
@@ -355,13 +359,14 @@ i.fas.fa-hands-helping{
         align-content: space-around;
     }
     figure{
-        width: 300px;
+        width: 290px;
     }
     section img{
         height: 200px;
     }
     .choise{
         margin-bottom: 20px;
+        width: 90%;
     }
     footer a{
         margin-left: 10px;
